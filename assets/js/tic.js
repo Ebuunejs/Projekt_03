@@ -80,6 +80,8 @@ function setField(field){
             flag = 1;
         }
         checkWinner();
-        checkGameOver();
+        if(endFlag!= true){
+            checkGameOver();
+        }
     }
 }

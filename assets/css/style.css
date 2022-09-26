@@ -1,0 +1,59 @@
+/* TIC TAC TOE*/
+
+/* Heading */
+h1 {
+      color: rgb(34, 79, 203);
+      font-size: 50px;
+}
+
+/* 3*3 Grid */
+#f1, #f2, #f3, #f4, #f5,
+#f6, #f7, #f8, #f9 {
+      width: 80px;
+      height: 52px;
+      margin: auto;
+      border: 1px solid gray;
+      border-radius: 6px;
+      font-size: 30px;
+      text-align: center;
+}
+
+/* Reset Button */
+#but {
+      box-sizing: border-box;
+      width: 150px;
+      height: 40px;
+      border: 1px solid dodgerblue;
+      margin: auto;
+      border-radius: 4px;
+      font-family: Verdana,
+          Geneva, Tahoma, sans-serif;
+
+      background-color: dodgerblue;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+}
+
+/* Player turn space */
+#print {
+      font-family: Verdana,
+          Geneva, Tahoma, sans-serif;
+
+      color: rgb(196, 21, 97);
+      font-size: 50px;
+}
+
+/* Main Container */
+#main {
+      text-align: center;
+}
+
+/* Game Instruction Text */
+#ins {
+      font-family: Verdana,
+          Geneva, Tahoma, sans-serif;
+           
+      color: dodgerblue;
+      font-size: 17px;
+}

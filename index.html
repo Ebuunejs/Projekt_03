@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Speech color changer</title>
+
+    <link rel="stylesheet" href="..\assets\css\style.css" />
+  </head>
+
+  <body>
+    <div id="main">
+        <h1>TIC TAC TOE</h1>
+        <!-- Game Instructions -->
+        <p id="ins">Game starts by say fieldname from f1 ... f9
+        <br><br>First Player starts as
+        <b>Player x</b><br>And<br>Second
+        Player as <b>Player o</b>
+        </p>
+
+        <!-- Space to show player turn -->
+        <p id="print"></p>
+        <br><br>
+        <!-- 3*3 grid of Boxes -->
+        <input type="text" id="f1" readonly>
+        <input type="text" id="f2" readonly>
+        <input type="text" id="f3" readonly>
+        <br><br>
+        <input type="text" id="f4" readonly>
+        <input type="text" id="f5" readonly>
+        <input type="text" id="f6" readonly>
+        <br><br>
+        <input type="text" id="f7" readonly>
+        <input type="text" id="f8" readonly>
+        <input type="text" id="f9" readonly>
+        <!-- Grid end here  -->
+        <br><br><br>
+        <!-- Button to reset game -->
+        <button id="but" onclick="resetGame()">
+            NEW GAME
+        </button>
+    </div>
+    <script src="..\assets\js\tic.js"></script>
+    <script src="..\assets\js\script.js"></script>
+  </body>
+</html>

@@ -22,11 +22,13 @@ recognition.start();
 recognition.onresult = function(event) {
   const field = event.results[0][0].transcript.toLowerCase();
   console.log('---------------------------')
-  console.log('field: ',field);
+  console.log('field found: ',field);
   console.log('---------------------------')
   for(const key of Object.keys(combinationSpeechObject)){
       if(combinationSpeechObject[key].indexOf(field) != -1){
-        setField(key); 
+        if(endFlag == false){
+          setField(key);
+        }
         break;
       }
       console.log('Error: key not found.')

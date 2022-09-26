@@ -1,4 +1,5 @@
 var flag = 1;
+var endFlag= false;
 var fieldsObject = {}
 var combinationObject = {
     // horizotanl
@@ -21,12 +22,27 @@ function checkWinner(){
             for(let i=0;i<3;i++){
                 if(fieldsObject[comb[i]] == '' || fieldsObject[comb[i]] != flagValue) break;
                 if(i >= 2){
+                    endFlag=true;
                     document.getElementById('print').innerHTML = `Player  '${flagValue}' wins!`;
                     disableEmptyFields();
                 }
             }
         }
     })
+}
+
+function checkGameOver(){
+    var checkGameOver=0;
+    const keys = Object.keys(fieldsObject);
+    for(let i=0;i<Object.keys(fieldsObject).length;i++){
+        if(fieldsObject[keys[i]]=='x' || fieldsObject[keys[i]] =='o'){
+            checkGameOver++;
+        }
+    }
+    if(checkGameOver==9){
+        endFlag=true;
+        document.getElementById('print').innerHTML = `Nobody has won!`;
+    }
 }
 
 function disableEmptyFields(){
@@ -46,6 +62,7 @@ function setup(){
 function resetGame() {
     location.reload();
     for(let i =0;i<9;i++){
+        endFlag=false;
         document.getElementById('f'+i).value = '';
     }
 }
@@ -63,5 +80,6 @@ function setField(field){
             flag = 1;
         }
         checkWinner();
+        checkGameOver();
     }
 }
